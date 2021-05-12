@@ -1,0 +1,25 @@
+<div class="cardStudent">
+    <div class="card bg-info cardStudent ">
+
+        <div class="p-3" >
+            <!-- <div > -->
+
+                <h2>{{myStudent.studentLastName}} {{myStudent.studentName}}</h2>
+
+            <!-- </div> -->
+            <div  class="card-body font-size-large m-1">
+                <div class="card-title font-weight-bold"> תעודת זהות</div>
+                <div class="card-text">{{myStudent.idStudent}}</div>
+
+                <div class="card-title font-weight-bold">גיל</div>
+                <div class="card-text">{{myStudent.age}}</div>
+
+                <div class="card-title font-weight-bold">תאריך לידה</div>
+                <div class="card-text">{{myStudent.date_brithDate|date:'shortDate' }}</div>
+                
+                <div class="card-title font-weight-bold">תאריך רישום</div>
+                <div class="card-text">{{myStudent.date_enter|date:'shortDate' }}</div>
+            </div>
+        </div>
+    </div>
+</div>

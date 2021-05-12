@@ -1,0 +1,36 @@
+<!-- <table class="table table-Warning table-striped table-hover"> -->
+<h2>רשימת התלמידות</h2>
+<div class="row m-2">
+    <input class="form-control" (change)='Search()' [(ngModel)]="mySearch"  placeholder="search...">
+
+
+    <!-- <svg (click)="Search()" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+        viewBox="0 0 16 16">
+        <path
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+    </svg> -->
+</div>
+<table class="table table-Warning ">
+    <thead>
+        <tr>
+            <th id="identity"> </th>
+            <th class="text-info">ת.ז</th>
+            <th class="text-info">שם פרטי</th>
+            <th class="text-info">שם משפחה</th>
+            <th class="text-info">מין</th>
+            <th class="text-info">גיל</th>
+        </tr>
+
+    </thead>
+    <tbody class="table-hover">
+        <tr *ngFor='let stud of listStudent'>
+            <td>{{stud.id}}</td>
+          <td>  <a class="text-dark text-decoration-none"
+                [routerLink]="['/detail-student', stud.idStudent]">{{stud.idStudent}}</a></td>
+            <td>{{stud.studentName}}</td>
+            <td>{{stud.studentLastName}}</td>
+            <td>{{stud.min}}</td>
+            <td>{{stud.age}}</td>
+        </tr>
+    </tbody>
+</table>
